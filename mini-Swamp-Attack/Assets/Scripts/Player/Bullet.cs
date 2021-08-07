@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,5 +13,14 @@ public class Bullet : MonoBehaviour
     {
         transform.Translate(Vector2.left * _speed * Time.deltaTime, Space.World);    
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.TryGetComponent(out Enemies enemy))
+        {
+            enemy.TakeDamage(_damage);
+            
+            Destroy(gameObject);
+        }
+    }
 }
