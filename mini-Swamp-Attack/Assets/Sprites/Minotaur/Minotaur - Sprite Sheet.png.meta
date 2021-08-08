@@ -951,12 +951,12 @@ TextureImporter:
       name: Minotaur - Sprite Sheet_5
       rect:
         serializedVersion: 2
-        x: 27
-        y: 1761
+        x: 26
+        y: 1762
         width: 52
         height: 40
       alignment: 9
-      pivot: {x: 0.4434953, y: 0.009030151}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -977,7 +977,7 @@ TextureImporter:
         width: 52
         height: 40
       alignment: 9
-      pivot: {x: 0.41370422, y: -0.006069946}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -998,7 +998,7 @@ TextureImporter:
         width: 52
         height: 41
       alignment: 9
-      pivot: {x: 0.4016178, y: 0.00035727897}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1019,7 +1019,7 @@ TextureImporter:
         width: 52
         height: 41
       alignment: 9
-      pivot: {x: 0.370305, y: 0.0043379623}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1036,11 +1036,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 412
-        y: 1762
+        y: 1761
         width: 52
         height: 41
       alignment: 9
-      pivot: {x: 0.3880404, y: -0.0015333223}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1061,7 +1061,7 @@ TextureImporter:
         width: 52
         height: 40
       alignment: 9
-      pivot: {x: 0.3779109, y: 0.017221069}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1082,7 +1082,7 @@ TextureImporter:
         width: 52
         height: 41
       alignment: 9
-      pivot: {x: 0.3945594, y: 0.014079768}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1103,7 +1103,7 @@ TextureImporter:
         width: 52
         height: 41
       alignment: 9
-      pivot: {x: 0.38581964, y: 0.021115188}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

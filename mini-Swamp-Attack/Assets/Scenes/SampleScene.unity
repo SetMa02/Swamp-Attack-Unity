@@ -176,11 +176,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105531795}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8502584, y: -2.946021, z: 3.1582031}
+  m_LocalPosition: {x: -5.0916467, y: -1.7554796, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1596617785}
-  m_RootOrder: 6
+  m_Father: {fileID: 1286666863}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &105531797
 SpriteRenderer:
@@ -1348,9 +1348,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 6.941905, y: -1.1905415, z: 3.1582031}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 105531796}
   m_Father: {fileID: 1596617785}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1286666864
 SpriteRenderer:
@@ -1390,7 +1391,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingOrder: -4
   m_Sprite: {fileID: -4004860913340282569, guid: f21732a6d0f499247871cc645f4b1341,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1600,7 +1601,6 @@ Transform:
   - {fileID: 1309182139}
   - {fileID: 1113752823}
   - {fileID: 1250143076}
-  - {fileID: 105531796}
   - {fileID: 1286666863}
   m_Father: {fileID: 1612001691}
   m_RootOrder: 5
@@ -2163,6 +2163,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1785513450382197954, guid: 4cd777409f3f9344da6c5bab7619bbf3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 1785513450382197955, guid: 4cd777409f3f9344da6c5bab7619bbf3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2171,7 +2176,7 @@ PrefabInstance:
     - target: {fileID: 1785513450382197955, guid: 4cd777409f3f9344da6c5bab7619bbf3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.18
+      value: -4.11
       objectReference: {fileID: 0}
     - target: {fileID: 1785513450382197955, guid: 4cd777409f3f9344da6c5bab7619bbf3,
         type: 3}
@@ -2234,6 +2239,11 @@ PrefabInstance:
       propertyPath: _shootPoint
       value: 
       objectReference: {fileID: 69062445}
+    - target: {fileID: 8793990737224270605, guid: 4cd777409f3f9344da6c5bab7619bbf3,
+        type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cd777409f3f9344da6c5bab7619bbf3, type: 3}
 --- !u!1001 &9016964462474409796
