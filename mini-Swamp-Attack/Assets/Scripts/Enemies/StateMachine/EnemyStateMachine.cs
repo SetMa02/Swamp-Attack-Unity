@@ -30,6 +30,19 @@ public class EnemyStateMachine : MonoBehaviour
    {
        if(_currentState == null)
            return;
+       var nextState = _currentState.GetNextSate();
+       if(nextState != null)
+           Transit(nextState);
+   }
+
+   private void Transit(State nextState)
+   {
+       if(_currentState != null)
+           _currentState.Exit();
+
+       _currentState = nextState;
        
+       if(_currentState != null)
+           _currentState.Enter(_target);
    }
 }

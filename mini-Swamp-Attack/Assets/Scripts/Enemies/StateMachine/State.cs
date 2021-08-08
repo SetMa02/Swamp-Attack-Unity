@@ -21,4 +21,26 @@ public class State : MonoBehaviour
          }
       }
    }
+
+   public State GetNextSate()
+   {
+      foreach (var transition in _transitions)
+      {
+         if (transition.NeedTransit)
+            return transition.TargetState;
+      }
+
+      return null;
+   }
+
+   public void Exit()
+   {
+      if (enabled == true)
+      {
+         foreach (var transition in _transitions)
+            transition.enabled = false;
+
+         enabled = false;
+      }
+   }
 }
