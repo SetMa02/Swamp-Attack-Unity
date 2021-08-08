@@ -10,12 +10,13 @@ public class EnemyStateMachine : MonoBehaviour
 
     private Player _target;
     private State _currentState;
-
+    
    public State Current => _currentState;
 
    private void Start()
    {
        _target = GetComponent<Enemies>().Target;
+       Reset(_firstState);
    }
 
    private void Reset(State startState)

@@ -11,7 +11,7 @@ public abstract class Transition : MonoBehaviour
 
     public State TargetState => _targetState;
 
-    public bool NeedTransit { get; private set; }
+    public bool NeedTransit { get; protected set; }
 
     public void Init(Player target)
     {

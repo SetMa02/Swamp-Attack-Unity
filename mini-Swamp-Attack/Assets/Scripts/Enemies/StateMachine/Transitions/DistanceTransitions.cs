@@ -1,18 +1,24 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class DistanceTransitions : MonoBehaviour
+public class DistanceTransitions : Transition
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float _transitionRange;
+    [SerializeField] private float _rangeSpray;
+
+    private void Start()
     {
-        
+        _transitionRange += Random.Range(-_rangeSpray, _rangeSpray);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Vector2.Distance(transform.position, Target.transform.position) < _transitionRange)
+        {
+            NeedTransit = true;
+        }
     }
 }
