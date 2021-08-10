@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private int _currentHealth;
     private Animator _animator;
     
+    
     private void Start()
     {
         _currentWeapon = _weapons[0];
@@ -34,13 +35,13 @@ public class Player : MonoBehaviour
 
     public void ApplyDamage(int damage)
     {
-        _health -= damage;
+        _currentHealth -= damage;
         if(_currentHealth <= 0)
             Destroy(gameObject);
     }
     
-    public void OnEnemyDied(int reward)
+    public void AddMoney(int money)
     {
-        Money += reward;
+        Money += money;
     }
 }
