@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Animator))]
 public class Player : MonoBehaviour
@@ -10,6 +11,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform _shootPoint;
     
     public int Money { get; private set; }
+
+    public event UnityAction<int, int> HealthChanged;
 
     private Weapon _currentWeapon;
     private int _currentHealth;
@@ -35,6 +38,7 @@ public class Player : MonoBehaviour
 
     public void ApplyDamage(int damage)
     {
+        HealthChanged?.Invoke(_currentHealth, _health);
         _currentHealth -= damage;
         if(_currentHealth <= 0)
             Destroy(gameObject);

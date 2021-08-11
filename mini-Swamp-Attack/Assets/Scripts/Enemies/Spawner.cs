@@ -16,6 +16,7 @@ public class Spawner : MonoBehaviour
     private int _spawned;
 
     public event UnityAction AllEnemySpawned;
+    public event UnityAction<int,int> EnemyCountChanged;
 
     private void Start()
     {
@@ -50,11 +51,13 @@ public class Spawner : MonoBehaviour
             .GetComponent<Enemies>();
         enemies.Init(_player);
         enemies.Dieing += OnEnemyDied;
+        EnemyCountChanged?.Invoke(_spawned,_currentWave.Count);
     }
 
     private void SetWave(int index)
     {
         _currentWave = _waves[index];
+        EnemyCountChanged?.Invoke(0,1);
     }
 
     private void OnEnemyDied(Enemies enemies)
