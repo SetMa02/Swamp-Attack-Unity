@@ -21,5 +21,6 @@ public abstract class Weapon : MonoBehaviour
     public void Buy()
     {
         _isBuyed = true;
+            
     }
 }

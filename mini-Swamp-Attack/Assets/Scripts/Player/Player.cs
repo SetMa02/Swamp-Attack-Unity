@@ -13,14 +13,17 @@ public class Player : MonoBehaviour
     public int Money { get; private set; }
 
     public event UnityAction<int, int> HealthChanged;
+    public event UnityAction<int> MoneyChanged;
 
     private Weapon _currentWeapon;
     private int _currentHealth;
+    private int _currentWeaponIndex;
     private Animator _animator;
     
     
     private void Start()
     {
+        ChangeWeapon(_weapons[_currentWeaponIndex]);
         _currentWeapon = _weapons[0];
         _animator = GetComponent<Animator>();
         _currentHealth = _health;
@@ -45,12 +48,40 @@ public class Player : MonoBehaviour
     public void AddMoney(int money)
     {
         Money += money;
+        MoneyChanged?.Invoke(Money);
     }
 
     public void BuyWeapon(Weapon weapon)
     {
         Money -= weapon.Price;
         _weapons.Add(weapon);
+        MoneyChanged?.Invoke(Money);
     }
-    
+
+    public void NextWeapon()
+    {
+        if (_currentWeaponIndex == _weapons.Count - 1)
+        {
+            _currentWeaponIndex = 0;
+        }
+        else
+            _currentWeaponIndex++;
+        
+        ChangeWeapon(_weapons[_currentWeaponIndex]);
+    }
+
+    public void PrewiousWeapon()
+    {
+        if (_currentWeaponIndex == 0)
+            _currentWeaponIndex = _weapons.Capacity - 1;
+        else
+            _currentWeaponIndex--;
+        
+        ChangeWeapon(_weapons[_currentWeaponIndex]);
+    }
+
+    private void ChangeWeapon(Weapon weapon)
+    {
+        _currentWeapon = weapon;
+    }
 }
