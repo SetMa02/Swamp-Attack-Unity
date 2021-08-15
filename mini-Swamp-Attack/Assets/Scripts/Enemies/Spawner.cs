@@ -35,12 +35,14 @@ public class Spawner : MonoBehaviour
             InstantiateEnemy();
             _spawned++;
             _timeAfterLastSpawn = 0;
+            EnemyCountChanged?.Invoke(_spawned,_currentWave.Count);
         }
 
         if (_currentWave.Count <= _spawned)
         {
             if (_waves.Count > _currentWaveNumber + 1)
                 AllEnemySpawned?.Invoke();
+            
             _currentWave = null;
         }
     }
@@ -51,7 +53,6 @@ public class Spawner : MonoBehaviour
             .GetComponent<Enemies>();
         enemies.Init(_player);
         enemies.Dieing += OnEnemyDied;
-        EnemyCountChanged?.Invoke(_spawned,_currentWave.Count);
     }
 
     private void SetWave(int index)
