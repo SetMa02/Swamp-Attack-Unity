@@ -564,12 +564,44 @@ MonoBehaviour:
   _waves:
   - Template: {fileID: 9016964462484738690, guid: bd24297ee6690c94a871a71dfd903023,
       type: 3}
+    Delay: 3
+    Count: 5
+  - Template: {fileID: 9016964462484738690, guid: bd24297ee6690c94a871a71dfd903023,
+      type: 3}
     Delay: 1
+    Count: 7
+  - Template: {fileID: 9016964462484738690, guid: bd24297ee6690c94a871a71dfd903023,
+      type: 3}
+    Delay: 2
     Count: 5
   - Template: {fileID: 9016964462484738690, guid: bd24297ee6690c94a871a71dfd903023,
       type: 3}
     Delay: 1
     Count: 10
+  - Template: {fileID: 9016964462484738690, guid: bd24297ee6690c94a871a71dfd903023,
+      type: 3}
+    Delay: 1
+    Count: 15
+  - Template: {fileID: 9016964462484738690, guid: bd24297ee6690c94a871a71dfd903023,
+      type: 3}
+    Delay: 0.8
+    Count: 12
+  - Template: {fileID: 9016964462484738690, guid: bd24297ee6690c94a871a71dfd903023,
+      type: 3}
+    Delay: 0.6
+    Count: 15
+  - Template: {fileID: 9016964462484738690, guid: bd24297ee6690c94a871a71dfd903023,
+      type: 3}
+    Delay: 1
+    Count: 20
+  - Template: {fileID: 9016964462484738690, guid: bd24297ee6690c94a871a71dfd903023,
+      type: 3}
+    Delay: 0.5
+    Count: 15
+  - Template: {fileID: 9016964462484738690, guid: bd24297ee6690c94a871a71dfd903023,
+      type: 3}
+    Delay: 0.5
+    Count: 20
   _spawnPoint: {fileID: 120165583}
   _player: {fileID: 747832978}
 --- !u!4 &120165583
@@ -1584,7 +1616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -30}
+  m_AnchoredPosition: {x: 0, y: -30.00003}
   m_SizeDelta: {x: -503, y: -413.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &368188801

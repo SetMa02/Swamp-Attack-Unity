@@ -12,8 +12,7 @@ public class AdsInit : MonoBehaviour
     private void Awake()
     {
         Advertisement.Initialize(gameId, testMode);
-        Advertisement.Banner.Show("Banner_Android" );
-       // StartCoroutine(ShowBannerWhenReady());
+         StartCoroutine(ShowBannerWhenReady());
     }
 
     IEnumerator ShowBannerWhenReady()
