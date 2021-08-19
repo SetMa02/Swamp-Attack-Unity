@@ -9,13 +9,4 @@ public class Pistol : Weapon
         Instantiate(Bullet, shootPoint.position, Quaternion.identity);
     }
     
-void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }

@@ -31,10 +31,16 @@ public class Player : MonoBehaviour
     
     private void Update()
     {
+        if (_currentWeapon.Label == "ПП" && Input.GetMouseButton(0))
+        {
+            _currentWeapon.Shoot(_shootPoint);
+        }
+            
         if (Input.GetMouseButtonDown(0))
         {
             _currentWeapon.Shoot(_shootPoint);
         }
+        
     }
 
     public void ApplyDamage(int damage)
